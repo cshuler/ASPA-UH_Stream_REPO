@@ -9,3 +9,4 @@ dependencies:
   - statistics
   - scikit-learn
   - lmfit
+  - xlrd 
