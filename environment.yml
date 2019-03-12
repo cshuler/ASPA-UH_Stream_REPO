@@ -1,4 +1,4 @@
-name: WX_prs
+name: STR_prs
 channels:
   - conda-forge
 dependencies:
