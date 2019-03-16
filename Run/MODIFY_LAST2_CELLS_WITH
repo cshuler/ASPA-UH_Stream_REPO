@@ -1,0 +1,19 @@
+in 
+# Baseflow separation 
+
+Note this uses the Turning Point method, described in "U.S. Geological Survey Groundwater Toolbox, A Graphical and Mapping Interface for Analysis of Hydrologic Data (Version 1.0)—User Guide for Estimation of Base Flow, Runoff, and Groundwater Recharge From Streamflow Data,  
+Pg. 2 explains the process and cites The BFI program (Wahl and Wahl, 1995) as the method used
+
+
+
+Site=[]; SumTotal=[]; SumBF=[]; SumRO=[]; AveTotal=[]; AveBF=[]; AveRO=[]; BFTF=[]; ROTF=[]; MedTotal=[]; MedBF=[]; MedRO=[]  # lists for sumary dataframe
+
+
+    MedTotal.append(All_flows['Total_flow_CFS'].median()); MedBF.append(All_flows['Base_flow_CFS'].median()); MedRO.append(All_flows['Total_flow_CFS'].median()-All_flows['Base_flow_CFS'].median())
+
+    
+and in 
+### produce streamflow statistics, yearly, and monthly
+    
+    
+Annual_stats_all = pd.DataFrame({'Site':Site,'Ave_Total_Q_[cfs]':AveTotal,'AveBF_[cfs]':AveBF,'Ave RO_[cfs]':AveRO,'BF:Q':BFTF, 'Med_Total_Q_[cfs]':MedTotal,'MedBF_[cfs]':MedBF,'Med_RO_[cfs]':MedRO})
